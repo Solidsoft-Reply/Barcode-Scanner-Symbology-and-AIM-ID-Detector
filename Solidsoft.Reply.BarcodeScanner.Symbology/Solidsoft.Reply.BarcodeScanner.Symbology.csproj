@@ -11,7 +11,7 @@
 	  <Description>A library for representing and detecting barcode symbologies when processing data reported by barcode scanners. The library supports AIM identifiers in accordance with ISO/IEC 15424:2008.</Description>
 	  <Company>Solidsoft Reply Ltd.</Company>
 	  <Authors>cnayoung</Authors>
-	  <RepositoryUrl>https://github.com/Solidsoft-Reply/BarcodeScanner/Symbology</RepositoryUrl>
+	  <RepositoryUrl>https://github.com/Solidsoft-Reply/Solidsoft.Reply.BarcodeScanner.Symbology</RepositoryUrl>
 	  <PackageProjectUrl>https://www.reply.com/solidsoft-reply/en/</PackageProjectUrl>
 	  <PackageIcon>Solidsoft Reply - LOGO Square_small.jpg</PackageIcon>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
