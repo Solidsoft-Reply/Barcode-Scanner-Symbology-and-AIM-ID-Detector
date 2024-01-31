@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="AimDetector.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2023 Solidsoft Reply Ltd. All rights reserved.
+//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // </copyright>
 // <license>
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -33,6 +33,7 @@ using System.Text.RegularExpressions;
     "StyleCop.CSharp.DocumentationRules",
     "SA1650:ElementDocumentationMustBeSpelledCorrectly",
     Justification = "Reviewed. Suppression is OK here.")]
+#if NET7_0_OR_GREATER
 public partial class AimDetector : IDetector
 {
     /// <summary>
@@ -41,7 +42,15 @@ public partial class AimDetector : IDetector
     /// <returns></returns>
     [GeneratedRegex("[a-z]\\d", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant)]
     private static partial Regex AimId();
-
+#else
+public class AimDetector : IDetector
+{
+    /// <summary>
+    ///   Regular expression to test for Latin alphabetic character.
+    /// </summary>
+    /// <returns></returns>
+    private static readonly Regex AimId = new("[a-z]\\d", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant);
+#endif
     /// <summary>
     ///   Analyze the symbology by inspecting the AIM identifier.
     /// </summary>
@@ -74,13 +83,23 @@ public partial class AimDetector : IDetector
             : new AimId(string.Empty, data);
 
         ISymbologyId TestAimIdMatch() =>
-            AimId().IsMatch(aimIdChars)
+#if NET7_0_OR_GREATER
+            AimId()
+#else
+            AimId
+#endif
+                .IsMatch(aimIdChars)
                 ? new AimId(aimIdChars, TestDataCharactersLengthGt3())
                 : new AimId(string.Empty, data);
 
         string TestDataCharactersLengthGt3() => 
             dataCharacters.Length > 3 
-                ? data[3..] 
+                ? data
+#if NET6_0_OR_GREATER
+                    [3..]
+#else
+                    .Substring(3)
+#endif
                 : string.Empty;
     }
 }
