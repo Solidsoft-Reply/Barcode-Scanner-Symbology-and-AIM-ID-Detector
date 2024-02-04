@@ -27,31 +27,25 @@ using System.Diagnostics.CodeAnalysis;
 /// <summary>
 ///   Represents an AIM symbology identifier.
 /// </summary>
+/// <remarks>
+///   Initializes a new instance of the <see cref="AimId" /> class.
+/// </remarks>
+/// <param name="id">
+///   The AIM identifier.
+/// </param>
+/// <param name="barcodeData">
+///   The barcode data without the AIM ID.
+/// </param>
 [SuppressMessage(
     "StyleCop.CSharp.DocumentationRules",
     "SA1650:ElementDocumentationMustBeSpelledCorrectly",
     Justification = "Reviewed. Suppression is OK here.")]
-public class AimId : ISymbologyId
+public class AimId(string id, string barcodeData) : ISymbologyId
 {
-    /// <summary>
-    ///   Initializes a new instance of the <see cref="AimId" /> class.
-    /// </summary>
-    /// <param name="id">
-    ///   The AIM identifier.
-    /// </param>
-    /// <param name="barcodeData">
-    ///   The barcode data without the AIM ID.
-    /// </param>
-    public AimId(string id, string barcodeData)
-    {
-        Id = id;
-        BarcodeData = barcodeData;
-    }
-
     /// <summary>
     ///   Gets the barcode data without an AIM identifier.
     /// </summary>
-    public string BarcodeData { get; }
+    public string BarcodeData { get; } = barcodeData;
 
     /// <summary>
     ///   Gets the barcode type.
@@ -97,7 +91,7 @@ public class AimId : ISymbologyId
     /// <summary>
     ///   Gets the symbology identifier character(s)
     /// </summary>
-    public string Id { get; }
+    public string Id { get; } = id;
 
     /// <summary>
     ///   Gets the AIM modifier.
