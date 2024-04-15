@@ -28,7 +28,20 @@
 	  <Version>1.0.1</Version>
 	  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	  <PublishRepositoryUrl>true</PublishRepositoryUrl>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<CodeAnalysisRuleSet>$(SolutionDir)/StyleCopAnalyzersDefault.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+
+	<ItemGroup>
+    <None Remove="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
 
   <ItemGroup>
 	<None Include="Solidsoft Reply - LOGO Square_small.jpg">
@@ -47,6 +60,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

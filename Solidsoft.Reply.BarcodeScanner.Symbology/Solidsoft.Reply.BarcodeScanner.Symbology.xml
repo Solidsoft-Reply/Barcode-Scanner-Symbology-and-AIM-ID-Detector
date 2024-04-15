@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Solidsoft.Reply.BarcodeScanner.Symbology</name>
+    </assembly>
+    <members>
+        <member name="T:Solidsoft.Reply.BarcodeScanner.Symbology.AimDetector">
+            <summary>
+              Detects the AIM symbology reported by the barcode scanner.
+            </summary>
+        </member>
+        <member name="M:Solidsoft.Reply.BarcodeScanner.Symbology.AimDetector.Detect(System.String)">
+            <summary>
+              Analyze the symbology by inspecting the AIM identifier.
+            </summary>
+            <param name="data">
+              The data to be parsed.
+            </param>
+            <returns>
+              The <see cref="M:Solidsoft.Reply.BarcodeScanner.Symbology.AimDetector.AimId" />.
+              The AIM symbology identifier.
+            </returns>
+        </member>
+        <member name="M:Solidsoft.Reply.BarcodeScanner.Symbology.AimDetector.AimId">
+            <remarks>
+            Pattern:<br/>
+            <code>[a-z]\\d</code><br/>
+            Options:<br/>
+            <code>RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match a character in the set [A-Za-z\u212A].<br/>
+            ○ Match a Unicode digit.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="T:Solidsoft.Reply.BarcodeScanner.Symbology.AimId">
+            <summary>
+              Represents an AIM symbology identifier.
+            </summary>
+            <remarks>
+              Initializes a new instance of the <see cref="T:Solidsoft.Reply.BarcodeScanner.Symbology.AimId" /> class.
+            </remarks>
+            <param name="id">
+              The AIM identifier.
+            </param>
+            <param name="barcodeData">
+              The barcode data without the AIM ID.
+            </param>
+        </member>
+        <member name="M:Solidsoft.Reply.BarcodeScanner.Symbology.AimId.#ctor(System.String,System.String)">
+            <summary>
+              Represents an AIM symbology identifier.
+            </summary>
+            <remarks>
+              Initializes a new instance of the <see cref="T:Solidsoft.Reply.BarcodeScanner.Symbology.AimId" /> class.
+            </remarks>
+            <param name="id">
+              The AIM identifier.
+            </param>
+            <param name="barcodeData">
+              The barcode data without the AIM ID.
+            </param>
+        </member>
+        <member name="P:Solidsoft.Reply.BarcodeScanner.Symbology.AimId.BarcodeData">
+            <summary>
+              Gets the barcode data without an AIM identifier.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.BarcodeScanner.Symbology.AimId.BarcodeType">
+            <summary>
+              Gets the barcode type.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.BarcodeScanner.Symbology.AimId.Id">
+            <summary>
+              Gets the symbology identifier character(s).
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.BarcodeScanner.Symbology.AimId.Modifier">
+            <summary>
+              Gets the AIM modifier.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.BarcodeScanner.Symbology.AimId.Scheme">
+            <summary>
+              Gets the symbology identification scheme.
+            </summary>
+        </member>
+        <member name="T:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType">
+            <summary>
+              An enumeration of barcode types.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.NoIdentifier">
+            <summary>
+              No identifier is available.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Unknown">
+            <summary>
+              The identifier is unknown.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Code39">
+            <summary>
+              Code 39 type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Telepen">
+            <summary>
+              Telepen type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Code128">
+            <summary>
+              Code 128 type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.DataMatrix">
+            <summary>
+              Data Matrix type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Gs1DataBar">
+            <summary>
+              GS1 DataBar type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.UpcEan">
+            <summary>
+              UPC A, UPC E, EAN-8 and EAN-13 types.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Codabar">
+            <summary>
+              Codabar type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Code93">
+            <summary>
+              Code 93 type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Code11">
+            <summary>
+              Code 11 type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Interleaved2Of5">
+            <summary>
+              Interleaved 2 of 5 type. Includes ITF-14.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.DotCode">
+            <summary>
+              Dot code Data type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Pdf417">
+            <summary>
+              PDF 417 type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.MsiCode">
+            <summary>
+              MSI Code type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Codablock">
+            <summary>
+              Codablock type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Pharmacode">
+            <summary>
+              Pharmacode type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.PlesseyCode">
+            <summary>
+              Plessey Code type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.QrCode">
+            <summary>
+              QR Code / Micro QR Code types.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Standard2Of5">
+            <summary>
+              Standard 2 of 5 type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Industrial2Of5">
+            <summary>
+              Industrial 2 of 5 type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Other">
+            <summary>
+              X - Other Symbology AIM type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.Aztec">
+            <summary>
+              Aztec type.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.BarcodeType.NonBarcodeData">
+            <summary>
+              Non-Barcode Data type.
+            </summary>
+        </member>
+        <member name="T:Solidsoft.Reply.BarcodeScanner.Symbology.IDetector">
+            <summary>
+              Represents a symbology detector.
+            </summary>
+        </member>
+        <member name="M:Solidsoft.Reply.BarcodeScanner.Symbology.IDetector.Detect(System.String)">
+            <summary>
+              Analyze the symbology by inspecting the symbology identifier.
+            </summary>
+            <param name="data">
+              The data to be parsed.
+            </param>
+            <returns>
+              The <see cref="T:Solidsoft.Reply.BarcodeScanner.Symbology.ISymbologyId" />.
+              The symbology identifier.
+            </returns>
+        </member>
+        <member name="T:Solidsoft.Reply.BarcodeScanner.Symbology.ISymbologyId">
+            <summary>
+              Represents the symbology identifier.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.BarcodeScanner.Symbology.ISymbologyId.BarcodeData">
+            <summary>
+              Gets the barcode data without an AIM identifier.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.BarcodeScanner.Symbology.ISymbologyId.BarcodeType">
+            <summary>
+              Gets the barcode type.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.BarcodeScanner.Symbology.ISymbologyId.Id">
+            <summary>
+              Gets the symbology identifier character(s).
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.BarcodeScanner.Symbology.ISymbologyId.Modifier">
+            <summary>
+              Gets the AIM modifier.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.BarcodeScanner.Symbology.ISymbologyId.Scheme">
+            <summary>
+              Gets the symbology identification scheme.
+            </summary>
+        </member>
+        <member name="T:Solidsoft.Reply.BarcodeScanner.Symbology.SymbologyIdScheme">
+            <summary>
+              The symbology identifier scheme.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.SymbologyIdScheme.Unknown">
+            <summary>
+              The symbology identification scheme is unknown.
+            </summary>
+        </member>
+        <member name="F:Solidsoft.Reply.BarcodeScanner.Symbology.SymbologyIdScheme.Aim">
+            <summary>
+              Association for Automatic Identification and Mobility.
+            </summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.AimId_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the AimId method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.AimId_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.AimId_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.AimId_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.AimId_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.AimId_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.AimId_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.AimId_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.AimId_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex"/>-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext"/>, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout"/> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout"/> is non-infinite.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_nonAscii_326E1FD0AD567A84CAD13F2BE521A57789829F59D59ABE37F9E111D0182B6601">
+            <summary>Supports searching for characters in or not in "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzK".</summary>
+        </member>
+    </members>
+</doc>
