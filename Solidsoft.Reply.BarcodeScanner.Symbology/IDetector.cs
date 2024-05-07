@@ -20,15 +20,9 @@
 
 namespace Solidsoft.Reply.BarcodeScanner.Symbology;
 
-using System.Diagnostics.CodeAnalysis;
-
 /// <summary>
 ///   Represents a symbology detector.
 /// </summary>
-[SuppressMessage(
-    "StyleCop.CSharp.DocumentationRules",
-    "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-    Justification = "Reviewed. Suppression is OK here.")]
 public interface IDetector {
     /// <summary>
     ///   Analyze the symbology by inspecting the symbology identifier.
@@ -40,11 +34,6 @@ public interface IDetector {
     ///   The <see cref="ISymbologyId" />.
     ///   The symbology identifier.
     /// </returns>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
-
     // ReSharper disable once UnusedMember.Global
     // ReSharper disable once UnusedMemberInSuper.Global
     ISymbologyId Detect(string data);

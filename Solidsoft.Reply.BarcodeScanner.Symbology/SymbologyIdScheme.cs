@@ -20,24 +20,13 @@
 
 namespace Solidsoft.Reply.BarcodeScanner.Symbology;
 
-using System.Diagnostics.CodeAnalysis;
-
 /// <summary>
 ///   The symbology identifier scheme.
 /// </summary>
-[SuppressMessage(
-    "StyleCop.CSharp.DocumentationRules",
-    "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-    Justification = "Reviewed. Suppression is OK here.")]
 public enum SymbologyIdScheme {
     /// <summary>
     ///   The symbology identification scheme is unknown.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
-
     // ReSharper disable once UnusedMember.Global
     Unknown,
 

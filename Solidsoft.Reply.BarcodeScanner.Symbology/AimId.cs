@@ -20,8 +20,6 @@
 
 namespace Solidsoft.Reply.BarcodeScanner.Symbology;
 
-using System.Diagnostics.CodeAnalysis;
-
 /// <summary>
 ///   Represents an AIM symbology identifier.
 /// </summary>
@@ -34,10 +32,6 @@ using System.Diagnostics.CodeAnalysis;
 /// <param name="barcodeData">
 ///   The barcode data without the AIM ID.
 /// </param>
-[SuppressMessage(
-    "StyleCop.CSharp.DocumentationRules",
-    "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-    Justification = "Reviewed. Suppression is OK here.")]
 public class AimId(string id, string barcodeData)
     : ISymbologyId {
     /// <summary>
@@ -90,11 +84,8 @@ public class AimId(string id, string barcodeData)
     /// <summary>
     ///   Gets the AIM modifier.
     /// </summary>
-#pragma warning disable SA1506 // Element documentation headers should not be followed by blank line
-
     // ReSharper disable once UnusedMember.Global
     public char Modifier => Id.Length == 0 ? char.MinValue : Id[1];
-#pragma warning restore SA1506 // Element documentation headers should not be followed by blank line
 
     /// <summary>
     ///   Gets the symbology identification scheme.

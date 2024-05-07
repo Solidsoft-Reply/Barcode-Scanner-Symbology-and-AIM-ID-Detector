@@ -22,16 +22,11 @@
 
 namespace Solidsoft.Reply.BarcodeScanner.Symbology;
 
-using System.Diagnostics.CodeAnalysis;
 using System.Text.RegularExpressions;
 
 /// <summary>
 ///   Detects the AIM symbology reported by the barcode scanner.
 /// </summary>
-[SuppressMessage(
-    "StyleCop.CSharp.DocumentationRules",
-    "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-    Justification = "Reviewed. Suppression is OK here.")]
 #if NET7_0_OR_GREATER
 public partial class AimDetector : IDetector {
 #else
@@ -43,7 +38,7 @@ public class AimDetector : IDetector {
     ///   Regular expression to test for Latin alphabetic character.
     /// </summary>
     /// <returns>A regular expression.</returns>
-    private static readonly Regex AimId = new("[a-z]\\d", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant);
+    private static readonly Regex AimId = new ("[a-z]\\d", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant);
 #endif
 
     /// <summary>

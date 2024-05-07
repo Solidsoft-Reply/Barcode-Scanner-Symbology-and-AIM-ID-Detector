@@ -21,8 +21,6 @@
 // ReSharper disable CommentTypo
 namespace Solidsoft.Reply.BarcodeScanner.Symbology;
 
-using System.Diagnostics.CodeAnalysis;
-
 /// <summary>
 ///   An enumeration of barcode types.
 /// </summary>
@@ -45,11 +43,6 @@ public enum BarcodeType {
     /// <summary>
     ///   Telepen type.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
-
     // ReSharper disable once IdentifierTypo
     Telepen,
 
@@ -76,11 +69,6 @@ public enum BarcodeType {
     /// <summary>
     ///   Codabar type.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
-
     // ReSharper disable once IdentifierTypo
     Codabar,
 
@@ -117,22 +105,12 @@ public enum BarcodeType {
     /// <summary>
     ///   Codablock type.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
-
     // ReSharper disable once IdentifierTypo
     Codablock,
 
     /// <summary>
     ///   Pharmacode type.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
-
     // ReSharper disable once IdentifierTypo
     Pharmacode,
 
@@ -160,10 +138,6 @@ public enum BarcodeType {
     /// <summary>
     ///   X - Other Symbology AIM type.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     Other,
 
     /// <summary>

@@ -20,15 +20,9 @@
 
 namespace Solidsoft.Reply.BarcodeScanner.Symbology;
 
-using System.Diagnostics.CodeAnalysis;
-
 /// <summary>
 ///   Represents the symbology identifier.
 /// </summary>
-[SuppressMessage(
-    "StyleCop.CSharp.DocumentationRules",
-    "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-    Justification = "Reviewed. Suppression is OK here.")]
 public interface ISymbologyId {
     /// <summary>
     ///   Gets the barcode data without an AIM identifier.
@@ -43,10 +37,6 @@ public interface ISymbologyId {
     /// <summary>
     ///   Gets the symbology identifier character(s).
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     string Id { get; }
 
     /// <summary>
@@ -57,11 +47,6 @@ public interface ISymbologyId {
     /// <summary>
     ///   Gets the symbology identification scheme.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
-
     // ReSharper disable once UnusedMember.Global
     SymbologyIdScheme Scheme { get; }
 }
