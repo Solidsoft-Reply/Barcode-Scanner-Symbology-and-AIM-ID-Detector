@@ -38,7 +38,7 @@ public class AimDetector : IDetector {
     ///   Regular expression to test for Latin alphabetic character.
     /// </summary>
     /// <returns>A regular expression.</returns>
-    private static readonly Regex AimId = new ("[a-z]\\d", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant);
+    private static readonly Regex AimId = new("[a-z]\\d", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant);
 #endif
 
     /// <summary>
