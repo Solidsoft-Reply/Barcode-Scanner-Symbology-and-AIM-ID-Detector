@@ -42,18 +42,21 @@
   <ItemGroup>
     <AdditionalFiles Include="stylecop.json" />
   </ItemGroup>
-
+	
   <ItemGroup>
-    <Content Include="..\DEVELOPER-NOTICE.txt" Link="LicenceAndNotices\DEVELOPER-NOTICE.txt" />
-    <Content Include="..\LICENSE.txt" Link="LicenceAndNotices\LICENSE.txt" />
+    <Content Include="..\DEVELOPER-NOTICE.txt" Link="Notices\DEVELOPER-NOTICE.txt" />
   </ItemGroup>
 
   <ItemGroup>
-	<None Include="..\README.md" Link="LicenceAndNotices\README.md" />
 	<None Include="Solidsoft Reply - LOGO Square_small.jpg">
 		<Pack>True</Pack>
 		<PackagePath>\</PackagePath>
 	</None>
+  </ItemGroup>
+	
+  <ItemGroup>
+    <None Include="../LICENSE.txt" Pack="true" PackagePath="" />
+    <None Include="../README.md" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
@@ -68,6 +71,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="LicenceAndNotices\" />
+    <Folder Include="Notices\" />
   </ItemGroup>
 </Project>
