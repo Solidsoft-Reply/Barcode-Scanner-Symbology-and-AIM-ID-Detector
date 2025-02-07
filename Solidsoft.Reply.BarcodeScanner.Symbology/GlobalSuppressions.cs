@@ -22,3 +22,6 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("CodeQuality", "IDE0079:Remove unnecessary suppression", Justification = "<Pending>", Scope = "type", Target = "~T:Solidsoft.Reply.BarcodeScanner.Symbology.ISymbologyId")]
 [assembly: SuppressMessage("CodeQuality", "IDE0079:Remove unnecessary suppression", Justification = "<Pending>", Scope = "type", Target = "~T:Solidsoft.Reply.BarcodeScanner.Symbology.SymbologyIdScheme")]
 [assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1633:File should have header", Justification = "<Pending>")]
+[assembly: SuppressMessage("StyleCop.CSharp.LayoutRules", "SA1500:Braces for multi-line statements should not share line", Justification = "<Pending>", Scope = "member", Target = "~M:Solidsoft.Reply.BarcodeScanner.Symbology.AimDetector.Detect(System.String)~Solidsoft.Reply.BarcodeScanner.Symbology.ISymbologyId")]
+[assembly: SuppressMessage("StyleCop.CSharp.LayoutRules", "SA1500:Braces for multi-line statements should not share line", Justification = "<Pending>", Scope = "type", Target = "~T:Solidsoft.Reply.BarcodeScanner.Symbology.ISymbologyId")]
+[assembly: SuppressMessage("StyleCop.CSharp.LayoutRules", "SA1500:Braces for multi-line statements should not share line", Justification = "<Pending>", Scope = "member", Target = "~P:Solidsoft.Reply.BarcodeScanner.Symbology.AimId.BarcodeType")]
